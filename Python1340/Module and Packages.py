@@ -2,7 +2,6 @@
 Modules
 '''
 # import fact_data function from the module:fact
-import calculations.fact2
 from fact import fact_data
 factdata = fact_data(10)
 print(f"Using from and Import method: {factdata}")

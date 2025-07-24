@@ -58,3 +58,5 @@ print(f"Output of sq_nums_input function which takes input data: {sq_lst3}")
 
 
 
+
+
