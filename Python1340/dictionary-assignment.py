@@ -29,11 +29,19 @@ def grades(marks):
     else:
         return 'Invalid Input'
 
-def student_grades(data):
+def student_grades(data:dict):
     mark_grade = {}
     for name,mark in data.items():
-        mark_grade[name] = grades(mark)
+        # dictionary_name[key_name] = value adding new data/updating existing data
+        val = grades(mark)
+        mark_grade[name] = val
     return mark_grade
 
 op_grades = student_grades(student_marks)
 print(op_grades)
+
+# Dictionary
+
+print(f"Keys of student marks dictionary: {student_marks.keys()}")
+print(f"Values of student marks dictionary:{student_marks.values()}")
+print(f"Items-Key value pair of student marks dictionary:{student_marks.items()}")
