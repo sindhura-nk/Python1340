@@ -61,6 +61,10 @@ class UPI(paymentProcessor):
             print("Payment Unsuccessful due to incorrect UPI ID")
     def deduct_amount(self):
         print("Payment Successful. Reverting back to Portal. Donot refresh the screen")
+    # below function/method takes input from user
+    def ip_upi_id(self):
+        upi_id = input("Please enter your UPI ID")
+        # logic code
 upi_1 = UPI("23423432@hdfc")
 upi_1.pay()
 upi_2 = UPI("23424")
