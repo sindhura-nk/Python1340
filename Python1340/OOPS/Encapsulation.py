@@ -66,6 +66,8 @@ upi_1 = UPI("23423432@hdfc")
 upi_1.pay()
 upi_1.__bank_server_connectivity()
 upi_1.__deduct_amount()
+# If we try to access private attributes/ methods, python will throw an error.
+# Above 2 lines of code will throw an error which is intended.
 upi_2 = UPI("23424")
 upi_2.pay()
 
