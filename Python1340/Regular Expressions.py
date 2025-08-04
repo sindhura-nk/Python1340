@@ -68,7 +68,7 @@ else:
     print("Not identified")
 
 mobile_pattern = r"[6 7 8 9][0-9]{9}"
-user_ip = int(input("Please enter your phone number"))
+user_ip = input("Please enter your phone number")
 m2 = re.search(mobile_pattern,user_ip)
 if m2:
     print("Mobile number is correctly entered.")
