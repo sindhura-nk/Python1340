@@ -67,13 +67,13 @@ if m1:
 else:
     print("Not identified")
 
-mobile_pattern = r"[6 7 8 9][0-9]{9}"
-user_ip = input("Please enter your phone number")
-m2 = re.search(mobile_pattern,user_ip)
-if m2:
-    print("Mobile number is correctly entered.")
-else:
-    print("Mobile number is incorrect.")
+# mobile_pattern = r"[6 7 8 9][0-9]{9}"
+# user_ip = input("Please enter your phone number")
+# m2 = re.search(mobile_pattern,user_ip)
+# if m2:
+#     print("Mobile number is correctly entered.")
+# else:
+#     print("Mobile number is incorrect.")
 print("===================")
 print("substitute")
 # sub()
@@ -92,3 +92,28 @@ new_data = re.sub(pat2,"*",conf_data)
 print(new_data)
 new_daat2 = re.sub(pat3,"*",conf_data)
 print(new_daat2)
+
+# findall()
+review_data = "Fantastic spot for an even or A quite cocktail. They were swell To host the Yelp crew with a great for US ..."
+#search for word that starts with capital and rest of the content is small letters
+print("====Using ? =====")
+pattern4 = r"[A-Z][a-z]?" # ? : 0 or 1 occurence of a-z
+m3 = re.findall(pattern4,review_data)
+print(m3)
+print("====Using * =====")
+pattern5 = r"[A-Z][a-z]*"
+m4 = re.findall(pattern5,review_data)
+print(m4)
+print("====Using + =====")
+pattern6 = r"[A-Z][a-z]+"
+m5 = re.findall(pattern6,review_data)
+print(m5)
+
+# search for lowercase words(0 or 1) and replace it with @
+review_data2 = "Fantastic spot for an even or a quite cocktail. They were swell To host the Yelp crew with a great for US ..."
+pattern7 = r"[\s][a-z]?[\s]"
+new_data3 = re.sub(pattern7," @ ",review_data2)
+print(new_data3)
+
+# search for lowercase words(0 or 1) and split it 
+print(re.split(pattern7,review_data2))
