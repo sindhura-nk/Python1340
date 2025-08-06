@@ -61,7 +61,7 @@ print(st1.strip(" "))
 print(st1)
 st1 = st1.strip()
 print(st1)
-st1.replace(st1,"Session completed today. thankyou for the inputs")
+st1.replace("session","Batch.Session completed today. thankyou for the inputs")
 print("===================")
 
 print("FILE HANDLING")
